@@ -15,6 +15,7 @@
 доступ к phpMyAdmin: http://127.0.0.1:8080/pma/
 
 при необходимости порт можно изменить в конфиге [docker-compose.yml](docker-compose.yml)
+
 настройки БД приложения находятся в [app/.env](app/.env)
 
 без установки, посмотреть можно [тут](https://blog.pc.madcore.pro/) 
