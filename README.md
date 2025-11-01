@@ -25,7 +25,7 @@
 запуск сидов: 
 `docker exec -itu www-data lr-blog /etc/init.mylocal/seed`
 
-свои нудные сценарии можно положить в директорию [conf/etc/init.mylocal/](conf/etc/init.mylocal)
+свои нужные сценарии можно положить в директорию [conf/etc/init.mylocal/](conf/etc/init.mylocal)
 
 
 
