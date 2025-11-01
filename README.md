@@ -18,4 +18,15 @@
 
 настройки БД приложения находятся в [app/.env](app/.env)
 
+запуск миграций:
+
+`docker exec -itu www-data lr-blog /etc/init.mylocal/migrate`
+
+запуск сидов: 
+`docker exec -itu www-data lr-blog /etc/init.mylocal/seed`
+
+свои нудные сценарии можно положить в директорию [conf/etc/init.mylocal/](conf/etc/init.mylocal)
+
+
+
 без установки, посмотреть можно [тут](https://blog.pc.madcore.pro/) 

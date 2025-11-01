@@ -1,6 +1,4 @@
 #!/bin/bash
 
-[ -f ~/.seed.done ] && exit
-
 cd /var/www/app &&
 ./artisan migrate
