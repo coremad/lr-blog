@@ -1,6 +1,8 @@
 app/node_modules
 app/public/hot
 app/public/storage
+app/public/js/*
+app/public/css/*
 app/storage/*
 app/vendor
 app/nodemodules
