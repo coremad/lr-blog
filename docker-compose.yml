@@ -1,0 +1,41 @@
+services:
+  lr-db:
+    image: "mariadb:11.4"
+    restart: unless-stopped
+    container_name: lr-db
+    security_opt:
+      - seccomp:unconfined
+      - apparmor:unconfined
+    ulimits:
+      nproc: 262144
+    # ports:
+    #   - "3306:3306"
+    networks:
+      - lr-net
+    environment:
+      MARIADB_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "lr_db"
+
+  rs-blog:
+    depends_on:
+      - lr-db
+    restart: unless-stopped
+    container_name: lr-blog
+    ports:
+      - "8080:80"
+    networks:
+      - lr-net
+    build:
+      context: .
+      dockerfile: ./conf/docker/www.Dockerfile
+    tty: true
+    working_dir: /var/www
+    volumes:
+      - ./app:/var/www/app
+      - ./conf/etc/init.mylocal:/etc/init.mylocal
+      - ./conf/etc/nginx:/etc/nginx
+      - ./conf/etc/php:/etc/php
+
+networks:
+    lr-net:
+        driver: bridge
