@@ -7,11 +7,11 @@ const Comments = ({comments}) => {
     }
     const rows = comments.map(comm => {
         return (<div className='comment' key={comm.id}>
-            <h4><span style={{color: 'darkblue'}}> {comm.author_name}&nbsp;</span> at &nbsp;
+            <div className='author'><span style={{color: 'darkblue'}}> {comm.author_name}&nbsp;</span> at &nbsp;
                 <span style={{color: 'darkred'}}>{dateFormat(comm.created_at, "mmmm dS, yyyy hh:mm:ss")}</span>
                 &nbsp; =>
-            </h4>
-            <p> {comm.content}</p>
+            </div>
+            <div> {comm.content}</div>
         </div>)
     });
     return (<div className='comments'>{rows}</div>);

@@ -3,10 +3,10 @@ app/public/hot
 app/public/storage
 app/public/js/*
 app/public/css/*
-app/storage/*
+app/storage/logs/*
+app/composer.lock
+app/package-lock.json
 app/vendor
-app/nodemodules
-app/.env
 app/.env.backup
 app/.phpunit.result.cache
 docker-compose.override.yml

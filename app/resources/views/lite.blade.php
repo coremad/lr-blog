@@ -16,7 +16,7 @@
 <div id="root"></div>
 <div id="footer">
     <br />
-    This is The End (footer)
+    This is The End (footer) git repo <a href="https://github.com/coremad/lr-blog">here</a>
 </div>
 <script src="{{mix('js/lite.js')}}"></script>
 </body>

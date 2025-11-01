@@ -1,100 +1,102 @@
 #root {
-    width: 99vw;
-    background-color: whitesmoke;
+  width: 99vw;
+  background-color: whitesmoke;
 }
 
 $alist-w: 50vw;
 
 .articles_container {
-    //position: absolute;
-    width: 100%;
-    height: 35vh;
+  //position: absolute;
+  width: 100%;
+  height: 35vh;
 
-    .articles {
+  .articles {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+
+    .art_list {
+      width: $alist-w;
+      height: 100%;
+      overflow-y: auto;
+
+      table {
         width: 100%;
         height: 100%;
-        display: inline-flex;
 
-        .art_list {
-            width: $alist-w;
-            height: 100%;
-            overflow-y: auto;
+        tbody {
+          //display: block;
+          //overflow-y: auto;
+          //display: inline-block;
 
-            table {
-                width: 100%;
-                height: 100%;
+          tr {
+            display: inline-block;
+            width: 100%;
+          }
 
-                tbody {
-                    //display: block;
-                    //overflow-y: auto;
-                    //display: inline-block;
+          tr:nth-child(even) {
+            background-color: #f2f2f2;
+          }
 
-                    tr {
-                        display: inline-block;
-                        width: 100%;
-                    }
+          tr:nth-child(odd) {
+            background-color: #ffffff;
+          }
 
-                    tr:nth-child(even) {
-                        background-color: #f2f2f2;
-                    }
-
-                    tr:nth-child(odd) {
-                        background-color: #ffffff;
-                    }
-
-                    tr:hover {
-                        cursor: pointer;
-                        background-color: #e0e0e0;
-                    }
-                }
-            }
+          tr:hover {
+            cursor: pointer;
+            background-color: #e0e0e0;
+          }
         }
-
-        .add_article {
-            width: 100vw - $alist-w;
-
-            .add_b {
-                display: flex;
-
-                div {
-                    margin: 5px;
-                }
-
-                #itittle {
-                    flex-grow: 1;
-                    text-align: center;
-                }
-            }
-
-            #icont {
-                display: flex;
-                height: 78%;
-
-                textarea {
-                    //width: 96%;
-                    flex-grow: 1;
-                    resize: none;
-                }
-            }
-        }
+      }
     }
+
+    .add_article {
+      width: 100vw - $alist-w;
+
+      .add_b {
+        display: flex;
+
+        div {
+          margin: 5px;
+        }
+
+        #itittle {
+          flex-grow: 1;
+          text-align: center;
+        }
+      }
+
+      #icont {
+        display: flex;
+        height: 78%;
+
+        textarea {
+          //width: 96%;
+          flex-grow: 1;
+          resize: none;
+        }
+      }
+    }
+  }
 }
 
 .article {
-    width: 99%;
-    background-color: ivory;
+  width: 99%;
+  background-color: ivory;
 }
 
 #comm_form {
-    display: flex;
+  display: flex;
 
-    #icomm {
-        flex-grow: 1;
-    }
+  #icomm {
+    flex-grow: 1;
+  }
 }
 
 .comment {
-    p {
-        background-color: antiquewhite;
-    }
+  .author {
+    background-color: antiquewhite;
+  }
+  background-color: lavender;
+  margin:6px;
 }
