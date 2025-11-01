@@ -25,6 +25,8 @@
 запуск сидов: 
 `docker exec -itu www-data lr-blog /etc/init.mylocal/seed`
 
+при первом запуске они отработают автоматически
+
 свои нужные сценарии можно положить в директорию [conf/etc/init.mylocal/](conf/etc/init.mylocal)
 
 
